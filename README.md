@@ -4,7 +4,7 @@
 
 ## GitHub Pages
 🔗 קישור לאתר:
-[https://](https://alonhanin.github.io/targil2/)
+https://alonhanin.github.io/targil2/
 
 
 > יש לפתוח את הקישור בדפדפן (מחשב או טלפון) ולהשתמש בדף הראשי כדי לנווט בין המימושים.
@@ -26,4 +26,5 @@
 - כל המימושים מציגים את אותו מבנה Layout.
 - בכל עמוד קיימת התאמה רספונסיבית למסכים שונים.
 - נעשה שימוש ב-GitHub Pages להצגת האתר.
+
 
