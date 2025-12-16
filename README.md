@@ -4,7 +4,8 @@
 
 ## GitHub Pages
 🔗 קישור לאתר:
-https://USERNAME.github.io/REPO_NAME/
+[https://](https://alonhanin.github.io/targil2/)
+
 
 > יש לפתוח את הקישור בדפדפן (מחשב או טלפון) ולהשתמש בדף הראשי כדי לנווט בין המימושים.
 
@@ -25,3 +26,4 @@ https://USERNAME.github.io/REPO_NAME/
 - כל המימושים מציגים את אותו מבנה Layout.
 - בכל עמוד קיימת התאמה רספונסיבית למסכים שונים.
 - נעשה שימוש ב-GitHub Pages להצגת האתר.
+
