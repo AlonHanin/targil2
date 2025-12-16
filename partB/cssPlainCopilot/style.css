@@ -1,0 +1,99 @@
+:root {
+    --accent: red;
+    --gap: 20px;
+    --height-main: 70vh;
+    --box-height: 20vh;
+    --small-box-height: 8.3vh;
+}
+
+* { box-sizing: border-box; }
+
+.mainbox {
+    /* no flexbox: use floats for children */
+    padding: var(--gap);
+    border: 3px solid var(--accent);
+    height: var(--height-main);
+    overflow: hidden; /* contain floats */
+}
+.mainbox::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* shared card style */
+.card {
+    border: 3px solid var(--accent);
+    background: transparent;
+}
+
+/* sidebar */
+.sidebar {
+    float: left;
+    width: 15%;
+    height: var(--height-main);
+    margin-right: var(--gap);
+}
+
+/* top row boxes */
+.box1, .box2, .box3, .box4 {
+    float: left;
+    width: 19.3%;
+    height: var(--box-height);
+    margin-right: var(--gap);
+}
+
+/* middle column (keeps original misspelling to avoid breaking HTML) */
+.midlleupper {
+    float: left;
+    width: 40.3%;
+    margin-right: var(--gap);
+}
+.midlleupper .box5,
+.midlleupper .box6 {
+    display: block;
+    width: 100%;
+    height: var(--small-box-height);
+    margin-bottom: var(--gap);
+}
+
+/* lower boxes: place on a new line (clear left) */
+.box7, .box8, .box9 {
+    clear: left;
+    float: left;
+    height: var(--box-height);
+    margin-right: var(--gap);
+}
+.box7 { width: 40%; }
+.box8 { width: 60%; }
+.box9 { width: 20%; }
+
+/* apply card borders to elements that used borders */
+.sidebar, .box1, .box2, .box3, .box4,
+.box5, .box6, .box7, .box8, .box9 {
+    border: 3px solid var(--accent);
+}
+
+/* Mobile: stack and full width without floats */
+@media (max-width: 750px) {
+    .mainbox {
+        height: auto;
+    }
+
+    .sidebar,
+    .box1, .box2, .box3, .box4,
+    .midlleupper,
+    .box7, .box8, .box9 {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: var(--gap);
+        height: auto;
+    }
+
+    .midlleupper .box5,
+    .midlleupper .box6 {
+        height: var(--small-box-height);
+    }
+}

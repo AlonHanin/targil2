@@ -1,0 +1,126 @@
+:root {
+    --accent: red;
+    --gap: 20px;
+    --height-main: 70vh;
+    --box-height: 20vh;
+    --small-box-height: 8.3vh;
+}
+
+* { box-sizing: border-box; }
+
+.mainbox {
+    /* Using CSS Grid instead of floats or flexbox */
+    display: grid;
+    grid-template-columns: 15% 19.3% 19.3% 19.3% 19.3%;
+    grid-template-rows: var(--box-height) 1fr var(--box-height);
+    gap: var(--gap);
+    padding: var(--gap);
+    border: 3px solid var(--accent);
+    height: var(--height-main);
+}
+
+/* Grid area placement */
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / -1; /* spans all rows */
+    border: 3px solid var(--accent);
+}
+
+.box1 {
+    grid-column: 2;
+    grid-row: 1;
+    border: 3px solid var(--accent);
+}
+
+.box2 {
+    grid-column: 3;
+    grid-row: 1;
+    border: 3px solid var(--accent);
+}
+
+.box3 {
+    grid-column: 4;
+    grid-row: 1;
+    border: 3px solid var(--accent);
+}
+
+.box4 {
+    grid-column: 5;
+    grid-row: 1;
+    border: 3px solid var(--accent);
+}
+
+.midlleupper {
+    grid-column: 2 / 4; /* spans columns 2-3 (approximately 40.3% including gap) */
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.midlleupper .box5,
+.midlleupper .box6 {
+    flex: 1;
+    border: 3px solid var(--accent);
+}
+
+.box7 {
+    grid-column: 4 / 6; /* spans columns 4-5 (approximately 40% including gap) */
+    grid-row: 2;
+    border: 3px solid var(--accent);
+}
+
+.box8 {
+    grid-column: 2 / 5; /* spans columns 2-4 (approximately 60% including gaps) */
+    grid-row: 3;
+    border: 3px solid var(--accent);
+}
+
+.box9 {
+    grid-column: 5;
+    grid-row: 3;
+    border: 3px solid var(--accent);
+}
+
+/* Mobile: stack and full width */
+@media (max-width: 750px) {
+    .mainbox {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .sidebar {
+        grid-column: 1;
+        grid-row: auto;
+        height: var(--box-height);
+    }
+
+    .box1, .box2, .box3, .box4 {
+        grid-column: 1;
+        grid-row: auto;
+        height: var(--box-height);
+    }
+
+    .midlleupper {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .midlleupper .box5,
+    .midlleupper .box6 {
+        height: var(--small-box-height);
+    }
+
+    .box7 {
+        grid-column: 1;
+        grid-row: auto;
+        height: var(--box-height);
+    }
+
+    .box8, .box9 {
+        grid-column: 1;
+        grid-row: auto;
+        height: var(--box-height);
+    }
+}
