@@ -106,5 +106,5 @@ html, body {
   .mainbox > div:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(20,20,40,0.08);
-  }
+    }
 }
